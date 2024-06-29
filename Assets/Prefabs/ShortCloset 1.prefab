@@ -440,8 +440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 253298498890958846}
-  closedTransform: {fileID: 2105212111501081561}
+  openPosition: {fileID: 253298498890958846}
+  closedPosition: {fileID: 2105212111501081561}
   animationSpeed: 2
 --- !u!1 &7154506575452641208 stripped
 GameObject:
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 8994825710772069146}
-  closedTransform: {fileID: 8697101139501484952}
+  openPosition: {fileID: 8994825710772069146}
+  closedPosition: {fileID: 8697101139501484952}
   animationSpeed: 2
 --- !u!1 &7613796517625427787 stripped
 GameObject:
@@ -524,8 +524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 6377004752450581373}
-  closedTransform: {fileID: 7558886924618233947}
+  openPosition: {fileID: 6377004752450581373}
+  closedPosition: {fileID: 7558886924618233947}
   animationSpeed: 2
 --- !u!1 &8574598651261045223 stripped
 GameObject:
@@ -566,6 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 4616446499035561530}
-  closedTransform: {fileID: 2359152632646178889}
+  openPosition: {fileID: 4616446499035561530}
+  closedPosition: {fileID: 2359152632646178889}
   animationSpeed: 2

@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    public Transform openTransform; // Transform when the object is open (includes position and rotation)
-    public Transform closedTransform; // Transform when the object is closed (includes position and rotation)
+    public Transform openPosition; // Position when the object is open
+    public Transform closedPosition; // Position when the object is closed
     public float animationSpeed = 2.0f; // Speed of the opening/closing animation
 
     private bool isOpen = false; // State of the object
     private bool isAnimating = false; // Check if currently animating
-    private Transform targetTransform; // Target transform for animation
+    private Vector3 targetPosition; // Target position for animation
+    private Quaternion targetRotation; // Target rotation for animation
 
     private void Start()
     {
-        targetTransform = closedTransform; // Initially set to closed transform
+        targetPosition = closedPosition.position; // Initially set to closed position
+        targetRotation = closedPosition.rotation; // Initially set to closed rotation
     }
 
     private void Update()
@@ -25,13 +27,15 @@ public class InteractableObject : MonoBehaviour
 
     private void AnimateObject()
     {
-        transform.position = Vector3.Lerp(transform.position, targetTransform.position, Time.deltaTime * animationSpeed);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetTransform.rotation, Time.deltaTime * animationSpeed);
+        // Move and rotate the object
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * animationSpeed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * animationSpeed);
 
-        if (Vector3.Distance(transform.position, targetTransform.position) < 0.01f && Quaternion.Angle(transform.rotation, targetTransform.rotation) < 1.0f)
+        // Check if the animation is close to completion
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f && Quaternion.Angle(transform.rotation, targetRotation) < 0.01f)
         {
-            transform.position = targetTransform.position; // Snap to target position
-            transform.rotation = targetTransform.rotation; // Snap to target rotation
+            transform.position = targetPosition; // Snap to target position
+            transform.rotation = targetRotation; // Snap to target rotation
             isAnimating = false; // Stop animating
         }
     }
@@ -41,7 +45,8 @@ public class InteractableObject : MonoBehaviour
         if (!isAnimating)
         {
             isOpen = !isOpen;
-            targetTransform = isOpen ? openTransform : closedTransform;
+            targetPosition = isOpen ? openPosition.position : closedPosition.position;
+            targetRotation = isOpen ? openPosition.rotation : closedPosition.rotation;
             isAnimating = true;
         }
     }

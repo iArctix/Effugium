@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class InspectableObject : MonoBehaviour
 {
-    public float inspectDistance = 1.5f; // Distance from the camera during inspection
-    public float rotationSpeed = 300.0f; // Speed of rotation when dragging
+    public float inspectDistance = 0.5f; // Distance from the camera during inspection
+    public float rotationSpeed = 500.0f; // Speed of rotation when dragging
     private bool isInspecting = false;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
