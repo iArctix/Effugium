@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 6045100155866987780}
-  closedTransform: {fileID: 8967546211151605848}
+  openPosition: {fileID: 6045100155866987780}
+  closedPosition: {fileID: 8967546211151605848}
   animationSpeed: 2
 --- !u!1 &9000655333029864682 stripped
 GameObject:
@@ -369,6 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6db49a656c8224b8b869bbe614e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 8858390230572396683}
-  closedTransform: {fileID: 6563238926227085716}
+  openPosition: {fileID: 8858390230572396683}
+  closedPosition: {fileID: 6563238926227085716}
   animationSpeed: 2
